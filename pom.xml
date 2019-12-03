@@ -3,20 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+	<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
     <groupId>org.yuequan</groupId>
     <artifactId>jpa-soft-delete-spring-boot-starter</artifactId>
     <version>1.0.0.RELEASE</version>
-    <packaging>jar</packaging>
-
     <name>jpa-soft-delete-spring-boot-starter</name>
     <description>Soft deletes for Spring Data Jpa</description>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starters</artifactId>
-        <version>2.0.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,26 +23,39 @@
     </properties>
 
     <dependencies>
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-rest</artifactId>
+		</dependency>
+		
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        
+        <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		</dependency>
 
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
+        </dependency>
+        
+		<dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -66,26 +77,26 @@
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>https://github.com/yuequan1997/jpa-soft-delete-spring-boot-starter/blob/master/LICENSE</url>
+            <url>https://github.com/hayrolr/spring-boot-data-jpa-soft-delete/blob/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
-        <url>https://github.com/yuequan1997/jpa-soft-delete-spring-boot-starter</url>
-        <connection>https://github.com/yuequan1997/jpa-soft-delete-spring-boot-starter.git</connection>
-        <developerConnection>https://github.com/yuequan1997/</developerConnection>
+        <url>https://github.com/hayrolr/spring-boot-data-jpa-soft-delete</url>
+        <connection>https://github.com/hayrolr/spring-boot-data-jpa-soft-delete.git</connection>
+        <developerConnection>https://github.com/hayrolr/</developerConnection>
     </scm>
 
     <issueManagement>
         <system>Github</system>
-        <url>https://github.com/yuequan1997/jpa-soft-delete-spring-boot-starter/issues</url>
+        <url>https://github.com/hayrolr/spring-boot-data-jpa-soft-delete/issues</url>
     </issueManagement>
 
     <developers>
         <developer>
-            <name>yuequan</name>
-            <email>yuequan1997@gmail.com</email>
+            <name>hayrolr</name>
+            <email>hayrolr@gmail.com</email>
         </developer>
     </developers>
 
